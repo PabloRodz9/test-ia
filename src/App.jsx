@@ -53,14 +53,14 @@ const App = () => {
   };
 
   return (
-    <div style={{ display: 'flex', alignItems: 'center', width: '100vw', flexDirection: 'column', height: '100vh', width:'500px' }}>
+    <div style={{ display: 'flex', alignItems: 'center', width: '100vw', flexDirection: 'column', height: '100vh' }}>
       <video
         id="avatarSpeaking"
         src={speakVideo}
         muted
         loop
         autoPlay
-        style={{ display: isSpeaking ? 'block' : 'none', objectFit: 'cover' }}
+        style={{ display: isSpeaking ? 'block' : 'none', objectFit: 'cover', width: '500px' }}
       />
       <video
         id="avatarStatic"
@@ -68,7 +68,7 @@ const App = () => {
         muted
         loop
         autoPlay
-        style={{ display: !isSpeaking ? 'block' : 'none', objectFit: 'cover', width:'500px' }}
+        style={{ display: !isSpeaking ? 'block' : 'none', objectFit: 'cover', width: '500px' }}
       />
       <button disabled={isSpeaking} style={{ marginTop: 8 }} onClick={playAudio}>Play Audio</button>
       <p style={{ border: `${message.length > 0 ? '1px solid grey' : ''}`, borderRadius: '8px', padding: '8px', width: 'fit-content' }}>{message}</p>
